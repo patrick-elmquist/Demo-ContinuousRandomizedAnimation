@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="false"
+    tools:context="com.patrickiv.demo.continuousanimationdemo.MainActivity"
+    >
+
+    <FrameLayout
+        android:id="@+id/animated_view_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimary"
+        >
+
+        <com.patrickiv.demo.continuousanimationdemo.StarAnimationView
+            android:id="@+id/animated_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="top|center_horizontal"
+            android:layout_alignParentTop="true"
+            />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Congrats!"
+            android:fontFamily="sans-serif-light"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Display2"
+            android:textColor="#66000000"
+            />
+
+        <LinearLayout
+            android:id="@+id/buttons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center"
+            android:orientation="horizontal"
+            android:padding="16dp"
+            >
+
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/btn_pause"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Pause"
+                style="@style/Widget.AppCompat.Button.Colored"
+                />
+
+            <android.support.v4.widget.Space
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                />
+
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/btn_resume"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Resume"
+                style="@style/Widget.AppCompat.Button.Colored"
+                />
+
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+
+
+</RelativeLayout>
